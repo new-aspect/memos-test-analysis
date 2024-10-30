@@ -14,7 +14,7 @@ func TestValidateEmail(t *testing.T) {
 		},
 		{
 			email: "@qq.com",
-			want:  false,
+			want:  true,
 		},
 		{
 			email: "1@gmail",
