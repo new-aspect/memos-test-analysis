@@ -120,3 +120,7 @@ func runOAuth2Client(serverURL string) {
 * grant_type=authorization_code&code=mock-code 表示通过授权码模式换取 access_token。
 
 * Content-Type: application/x-www-form-urlencoded 是指定请求体编码格式，让服务器正确理解传递的参数。
+
+上面代码我发现他使用了httptest去处理mux，这样可以在运行是后台运行一个server，去模拟oauth2的服务器
+也知道access token传入POST获取请求时的信息，通过GPT帮我的简化，我已经理解了OAuth的操作流程，感觉自己不仅后面
+看他的代码会更容易，而且我感觉我自己可以对接OAuth了
