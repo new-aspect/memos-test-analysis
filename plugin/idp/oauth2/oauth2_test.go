@@ -63,3 +63,8 @@ func TestNewIdentityProvider(t *testing.T) {
 		})
 	}
 }
+
+// 测试整体的逻辑，包含用没有直接访问权限的授权码
+func TestIdentityProvider(t *testing.T) {
+
+}
