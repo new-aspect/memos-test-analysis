@@ -40,11 +40,11 @@ func taskWithTimeout() error {
 		return nil
 	})
 
-	// 第三个协程来接受报错，通知关闭
-	eg.Go(func() error {
-		<-ctx.Done()
-		return ctx.Err()
-	})
+	//// 第三个协程来接受报错，通知关闭
+	//eg.Go(func() error {
+	//	<-ctx.Done()
+	//	return ctx.Err()
+	//})
 
 	if err := eg.Wait(); err != nil {
 		return fmt.Errorf("过了超时时间 %s", err)
