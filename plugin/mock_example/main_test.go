@@ -12,7 +12,7 @@ type MockSMSService struct {
 
 func (m *MockSMSService) SendMsg(phoneNumber string, message string) error {
 	args := m.Called(phoneNumber, message)
-	return args.Error(1)
+	return args.Error(0)
 }
 
 func TestOrderService_PlaceOrder(t *testing.T) {
